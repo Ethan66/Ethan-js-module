@@ -1,0 +1,104 @@
+@charset "UTF-8";
+$borderCor:#e9e9e9; $hoverCor:#108ee9;
+body{
+  background: url(../images/bg1.png);
+}
+#login{
+  width: 500px; height: 500px; position: fixed; top: 50%; left: 50%; margin: -250px 0 0 -250px;
+  >form{
+    width: 350px; margin: 0 auto; box-sizing: border-box;
+    padding: 36px 26px 10px 26px; border-radius: 5px;
+    background: #E4E0DC; border: 1px solid rgb(242,240,238);
+    box-shadow: inset 0px 1px 0px rgb(255,255,255), -1px 1px 2px 2px rgba(171,165,161,0.3);
+    text-shadow: -3px 3px 8px rgb(198,192,187);
+  }
+}
+.e-login{
+  display: inline-block;
+  a{
+    text-decoration: none;
+  }
+  .line{
+    margin-bottom: 25px; position: relative;
+  }
+  .iconfont{
+    line-height: 28px;
+  }
+  .icon-mima{
+    line-height: 32px;
+  }
+  .boxShadow{
+    box-shadow: 0px 1px 1px rgba(255,255,255,0.75);
+  }
+  label{
+    position: absolute; top: 6px; left: 10px; color: #999;
+  }
+  input{
+    border: 1px solid rgb(202,196,191); border-radius: 5px; line-height: 40px; width: 100%; text-indent: 10px;
+    box-shadow: inset 2px 2px 3px rgba(0,0,0,0.08); text-indent: 32px; background: rgba(225,220,216,1); outline: 0;
+    transition: border-color .6s,box-shadow .3s;
+    &:hover{
+      border-color: #A09D9B;
+    }
+    &:focus{
+      box-shadow: inset 0 1px 1px rgba(0,0,0,0.075); background: rgb(245,242,239);
+    }
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #999;
+  }
+
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #999;
+  }
+
+  input:-ms-input-placeholder{
+    color: #999;
+  }
+
+  input::-webkit-input-placeholder{
+    color: #999;
+  }
+  input[type=submit],.registerBtn{
+    padding: 0 12px; text-indent: 0; color: #fff; font-size: 14px;
+    background:-webkit-gradient(
+                    linear, left top, left bottom,
+                    from(#9cb16e),
+                    color-stop(0.50, #7a924a),
+                    to(#9bb16e));
+    box-shadow: 4px 4px 9px rgba(000,000,000,0.1), inset 1px 1px 0px rgba(247,244,247,0.6);
+    text-shadow: 0px -1px 0px rgba(000,000,000,0.3), 0px 0px 0px rgba(255,255,255,0);
+    outline: 0; border-color: rgb(125,135,98); cursor: pointer; transition: all .3s;
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+  .text{
+    margin-bottom: 5px;
+    label{
+      position: static;
+    }
+    input[type=checkbox]{
+      width: auto; margin-right: 3px; vertical-align: -1px;
+      &:focus{
+        box-shadow: none;
+      }
+    }
+    a{
+      display: block; font-size: 12px; font-weight: bold; text-indent: 4px; margin-top: 14px;
+      color: rgb(152,142,135); text-shadow: -3px 3px 8px rgb(198,192,187);
+    }
+  }
+  .registerBtn{
+    display: block; line-height: 40px; border: 1px solid rgb(125,135,98); border-radius: 5px; text-align: center;
+  }
+  .remember{
+    color: rgb(98,94,91); font-weight: bold;
+  }
+  .marginBottom{
+    margin-bottom: 20px;
+  }
+  .line b{
+    font-size: 12px; color: #d20000; text-shadow: none; position: absolute; bottom: -19px; left: 6px;
+  }
+}
