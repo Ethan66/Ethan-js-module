@@ -6,12 +6,14 @@ var Login=(function(){
     Login1.prototype.init=function($ct){
         this.$ct=$ct;
         this.submit=$ct.find("input[type=submit]");
+        this.$username=$ct.find(".username");
+        this.$password=$ct.find(".password");
     }
     Login1.prototype.bind=function(){
         var that=this;
+        that.addTipTab();   //增加注释标签
         this.submit.on("click",function(e){
             e.preventDefault();
-            that.addTipTab();   //增加注释标签
             var data=that.getValue();   //获取value值
             var result=that.isStandard(data);   //判断是否符合标准，得出相应结果
             var tip=that.getTips(data["username"],data["password"],result[0],result[1]);   //根据得出结果判断获得哪个注释文字
@@ -20,6 +22,8 @@ var Login=(function(){
 
             }*/
         });
+        this.$username.on("input",this.changeValue.bind(this));
+        this.$password.on("input",this.changeValue.bind(this));
     }
     Login1.prototype.addTipTab=function(){
         this.$ct.find(".line").each(function(index,value){
@@ -27,6 +31,11 @@ var Login=(function(){
                 $(this).append("<b></b>");
             }
         })
+    }
+    Login1.prototype.changeValue=function(e){
+        if($(e.target).next("b")){
+            $(e.target).next("b").css("display","none");
+        }
     }
     Login1.prototype.getValue=function(){
         var user=this.$ct.find(".username").val(),pass=this.$ct.find(".password").val();
@@ -92,7 +101,10 @@ var Login=(function(){
         // var html="<b>"++"</b>";
         this.$ct.find('.line').each(function(index,value){
             $(this).find("b").text("");
-            if(index==newTip[0]) $(this).find("b").text(newTip[1]);
+            if(index==newTip[0]) {
+                $(this).find("b").css("display","block");
+                $(this).find("b").text(newTip[1]);
+            }
         })
     }
     return {
