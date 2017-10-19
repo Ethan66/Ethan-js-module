@@ -1,0 +1,25 @@
+body{
+  background: #F1AF22;
+}
+.center{
+  width: 500px; height: 500px; position: fixed; left: 50%; top: 50%; margin-left: -250px; margin-top: -350px;
+}
+
+
+.e-magnify{
+  width: 400px; height: 400px; margin: 50px auto; position: relative;
+  .mini{
+    width: 100%; height: 100%;
+  }
+  .scope.none{
+    display: none;
+  }
+  .scope{
+    display: block; width: 200px; height: 200px; background: url(../images/dot.png) repeat;
+    position: absolute; top: 0; left: 0;
+  }
+  .large{
+    width: 100%; height: 100%; overflow: hidden; border: 1px solid #999; box-sizing: border-box;
+    position: absolute; right: -410px; top: -16px; z-index: 1000;
+  }
+}
