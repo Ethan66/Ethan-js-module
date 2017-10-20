@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="css/magnify.css" />
     <title>图片放大镜</title>
 </head>
@@ -13,13 +14,12 @@
       <div class="e-magnify">
           <img class="mini" src="images/magnify1.jpg" />
           <span class="scope none"></span>
-          <p class="large"><img class="img" src="images/magnify1.jpg" /></p>
       </div>
   </div>
   <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/magnify.js"></script>
   <script>
-      Magnify.init($(".e-magnify"));
+      Magnify.init($(".e-magnify"),'images/magnify1.jpg');
   </script>
 </body>
 </html>
