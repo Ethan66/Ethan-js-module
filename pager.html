@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/pager.css" />
+    <title>分页器</title>
+</head>
+<body>
+    <div>
+        <p>
+            这个分页器会在控制台打印出页数
+        </p>
+        <div class="e-pager"> </div>
+    </div>
+    <div>
+        <p>
+            这个分页器会改变 url
+        </p>
+        <div class="e-pager"> </div>
+    </div>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/pager.js"></script>
+    <script>
+        Pager.init($(".e-pager"),1,3,10,15);
+    </script>
+</body>
+</html>
