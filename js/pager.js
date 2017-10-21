@@ -6,7 +6,7 @@ var Pager=(function(){
     Pager1.prototype.init=function($ct,total,num,firNum,now){
         this.$ct=$ct;
         this.num=num;          //当前展示多少页数
-        this.curNum=[firNum];  //当前展示页数的第一页是多少
+        this.curNum=[firNum];  //当前展示页数的第一页到最后一页的数组
         this.curPoint=now-1;   //当前所在第几页
         this.point=this.num-3;    //当点击最后第二页的时候会往下翻页
         this.nextPoint=0;       //点击的时候保存作用
@@ -60,6 +60,26 @@ var Pager=(function(){
                 else {
                     that.setCurpoint();
                 }
+            }
+        });
+        this.$ct.on("click",".first",function(){
+           if(that.$ct.find("ol li").eq(0).attr("data-page")>1){
+               for(var i=1;i<=that.curNum.length;i++){
+                   that.curNum[i-1]=i;
+               }
+               that.nextPoint=0;
+               that.showPage();
+               that.setCurpoint();
+           }
+        });
+        this.$ct.on("click",".last",function(){
+            if(that.$ct.find("ol li").eq(that.num-1).attr("data-page")<that.total){
+                for(var i=that.num,j=0;i>=1;i--,j++){
+                    that.curNum[i-1]=that.total-j;
+                }
+                that.nextPoint=that.num-1;
+                that.showPage();
+                that.setCurpoint();
             }
         });
     }
