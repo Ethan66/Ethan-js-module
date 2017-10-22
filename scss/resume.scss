@@ -1,0 +1,148 @@
+$headH: 240px; $color: #527460;
+body{
+  font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+}
+.clearfix:after{
+  display: block; content: ""; clear: both;
+}
+#resume{
+  width: 1000px; margin: 30px auto; box-shadow: 0 0 3px rgba(0,0,0,.7);
+}
+#head{
+  height: $headH; background: #F1F3F0;
+  >.img{
+    width: $headH; height: 100%; float: left; background: red;
+  }
+  >.info{
+    margin-left: $headH; padding: 40px 30px 0;
+    p{
+      line-height: 38px;
+    }
+    .name{
+      font-size: 30px; margin-bottom: 8px; font-weight: bold;
+    }
+    .intention{
+      font-weight: bold;
+    }
+    .list{
+      margin-top: 10px;
+      li {
+        float: left;
+        .iconfont{
+          color: $color; padding-right: 10px;
+        }
+        .icon-dianhua{
+          font-size: 20px;
+        }
+        .icon-youxiang{
+          font-size: 18px;
+        }
+        .icon-shengri{
+          font-size: 23px; font-weight:bold; vertical-align: -2px;
+        }
+        .icon-zuobiao{
+          font-size: 25px;
+        }
+      }
+      & li:first-child{
+        width: 200px;
+      }
+    }
+  }
+}
+#content{
+  background: #F6F6F6;
+  #skill{
+    width: $headH; float: left; background: #F6F6F6; height: 100%; padding-left: 24px; padding-top: 30px;
+  }
+  .nor-tit{
+    color: $color; padding: 10px 0;  border-bottom: 1px solid #C9C9C9; margin-bottom: 10px; font-size: 16px; position: relative;
+    .iconfont{
+      display: block; width: 26px; height: 26px; padding: 4px; background: $color; color: #fff; border-radius: 4px; font-size: 17px;
+      font-weight: normal; position: absolute; left: 0; top: 11px;
+    }
+    h3{
+      margin-left: 35px;
+    }
+    .icon-iconfont-jishu{
+      font-size: 18px; line-height: 18px;
+    }
+    .icon-ic_business_center_px{
+      font-size:19px; text-indent: -1px; line-height: 20px;
+    }
+    .icon-jiaoyu{
+      font-size: 21px; text-indent: -1px; line-height: 18px;
+    }
+    .icon-ren{
+      font-size: 16px; text-indent: 1px; line-height: 19px;
+    }
+  }
+  .list{
+    margin-bottom: 30px;
+    li{
+      padding-right: 20px;
+      .text{
+        color: #585858; line-height: 30px; font-size: 14px;
+      }
+      .progress{
+        height: 12px; background: #fff;
+        span{
+          display: block; width: 50%; height: 100%; background: $color;
+        }
+        i{
+          color: #999; font-size: 12px; margin-right: 8px; margin-top: -15px; color: transparent; float: right;
+        }
+        .js{
+          width: 75%;
+        }
+        .html{
+          width: 90%;
+        }
+        .css{
+          width: 90%;
+        }
+        .jq{
+          width: 80%;
+        }
+        .vue{
+          width: 50%;
+        }
+        .react{
+          width: 50%;
+        }
+        .ps{
+          width: 90%;
+        }
+        .ai{
+          width: 40%;
+        }
+        .music{
+          width: 80%;
+        }
+        .travel{
+          width: 60%;
+        }
+      }
+    }
+  }
+  #experience{
+    height: 1000px; margin-left: $headH; background: #fff; padding: 30px 40px;
+    .work-info{
+      .info1{
+        color: $color; font-size: 14px; font-weight: bold;
+        span{
+          .date{
+            padding-right: 30px;
+          }
+        }
+        b{
+          font-weight: bold;
+        }
+        em{
+          float: right; font-style: normal;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,159 @@
+body {
+  font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif; }
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+#resume {
+  width: 1000px;
+  margin: 30px auto;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.7); }
+
+#head {
+  height: 240px;
+  background: #F1F3F0; }
+  #head > .img {
+    width: 240px;
+    height: 100%;
+    float: left;
+    background: red; }
+  #head > .info {
+    margin-left: 240px;
+    padding: 40px 30px 0; }
+    #head > .info p {
+      line-height: 38px; }
+    #head > .info .name {
+      font-size: 30px;
+      margin-bottom: 8px;
+      font-weight: bold; }
+    #head > .info .intention {
+      font-weight: bold; }
+    #head > .info .list {
+      margin-top: 10px; }
+      #head > .info .list li {
+        float: left; }
+        #head > .info .list li .iconfont {
+          color: #527460;
+          padding-right: 10px; }
+        #head > .info .list li .icon-dianhua {
+          font-size: 20px; }
+        #head > .info .list li .icon-youxiang {
+          font-size: 18px; }
+        #head > .info .list li .icon-shengri {
+          font-size: 23px;
+          font-weight: bold;
+          vertical-align: -2px; }
+        #head > .info .list li .icon-zuobiao {
+          font-size: 25px; }
+      #head > .info .list li:first-child {
+        width: 200px; }
+
+#content {
+  background: #F6F6F6; }
+  #content #skill {
+    width: 240px;
+    float: left;
+    background: #F6F6F6;
+    height: 100%;
+    padding-left: 24px;
+    padding-top: 30px; }
+  #content .nor-tit {
+    color: #527460;
+    padding: 10px 0;
+    border-bottom: 1px solid #C9C9C9;
+    margin-bottom: 10px;
+    font-size: 16px;
+    position: relative; }
+    #content .nor-tit .iconfont {
+      display: block;
+      width: 26px;
+      height: 26px;
+      padding: 4px;
+      background: #527460;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 17px;
+      font-weight: normal;
+      position: absolute;
+      left: 0;
+      top: 11px; }
+    #content .nor-tit h3 {
+      margin-left: 35px; }
+    #content .nor-tit .icon-iconfont-jishu {
+      font-size: 18px;
+      line-height: 18px; }
+    #content .nor-tit .icon-ic_business_center_px {
+      font-size: 19px;
+      text-indent: -1px;
+      line-height: 20px; }
+    #content .nor-tit .icon-jiaoyu {
+      font-size: 21px;
+      text-indent: -1px;
+      line-height: 18px; }
+    #content .nor-tit .icon-ren {
+      font-size: 16px;
+      text-indent: 1px;
+      line-height: 19px; }
+  #content .list {
+    margin-bottom: 30px; }
+    #content .list li {
+      padding-right: 20px; }
+      #content .list li .text {
+        color: #585858;
+        line-height: 30px;
+        font-size: 14px; }
+      #content .list li .progress {
+        height: 12px;
+        background: #fff; }
+        #content .list li .progress span {
+          display: block;
+          width: 50%;
+          height: 100%;
+          background: #527460; }
+        #content .list li .progress i {
+          color: #999;
+          font-size: 12px;
+          margin-right: 8px;
+          margin-top: -15px;
+          color: transparent;
+          float: right; }
+        #content .list li .progress .js {
+          width: 75%; }
+        #content .list li .progress .html {
+          width: 90%; }
+        #content .list li .progress .css {
+          width: 90%; }
+        #content .list li .progress .jq {
+          width: 80%; }
+        #content .list li .progress .vue {
+          width: 50%; }
+        #content .list li .progress .react {
+          width: 50%; }
+        #content .list li .progress .ps {
+          width: 90%; }
+        #content .list li .progress .ai {
+          width: 40%; }
+        #content .list li .progress .music {
+          width: 80%; }
+        #content .list li .progress .travel {
+          width: 60%; }
+  #content #experience {
+    height: 1000px;
+    margin-left: 240px;
+    background: #fff;
+    padding: 30px 40px; }
+    #content #experience .work-info .info1 {
+      color: #527460;
+      font-size: 14px;
+      font-weight: bold; }
+      #content #experience .work-info .info1 span .date {
+        padding-right: 30px; }
+      #content #experience .work-info .info1 b {
+        font-weight: bold; }
+      #content #experience .work-info .info1 em {
+        float: right;
+        font-style: normal; }
+
+/*# sourceMappingURL=resume.css.map */

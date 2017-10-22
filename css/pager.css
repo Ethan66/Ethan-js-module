@@ -2,6 +2,9 @@ body {
   background: #E7E7E7;
   text-align: center; }
 
+.e-pager * {
+  box-sizing: content-box; }
+
 .e-pager {
   display: inline-flex;
   padding: 1px;
