@@ -1,5 +1,7 @@
 body {
-  font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif; }
+  font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  font-family: sans-serif;
+  font-size: 14px; }
 
 .clearfix:after {
   display: block;
@@ -7,9 +9,9 @@ body {
   clear: both; }
 
 #resume {
-  width: 1000px;
+  width: 900px;
   margin: 30px auto;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.7); }
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); }
 
 #head {
   height: 240px;
@@ -18,20 +20,25 @@ body {
     width: 240px;
     height: 100%;
     float: left;
-    background: red; }
+    background: url(../images/head.jpg) no-repeat;
+    background-size: cover; }
   #head > .info {
     margin-left: 240px;
-    padding: 40px 30px 0; }
+    padding: 40px 30px 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    background: url(../images/re-bg.png) no-repeat;
+    background-size: cover; }
     #head > .info p {
       line-height: 38px; }
     #head > .info .name {
       font-size: 30px;
-      margin-bottom: 8px;
-      font-weight: bold; }
+      margin-bottom: 8px; }
     #head > .info .intention {
       font-weight: bold; }
     #head > .info .list {
-      margin-top: 10px; }
+      margin-top: 10px;
+      font-family: sans-serif; }
       #head > .info .list li {
         float: left; }
         #head > .info .list li .iconfont {
@@ -59,12 +66,17 @@ body {
     height: 100%;
     padding-left: 24px;
     padding-top: 30px; }
+    #content #skill .introduction {
+      padding: 10px 0;
+      line-height: 25px;
+      margin: 0 16px 10px -5px;
+      color: #4f6d5c; }
   #content .nor-tit {
     color: #527460;
     padding: 10px 0;
     border-bottom: 1px solid #C9C9C9;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 15px;
     position: relative; }
     #content .nor-tit .iconfont {
       display: block;
@@ -80,7 +92,8 @@ body {
       left: 0;
       top: 11px; }
     #content .nor-tit h3 {
-      margin-left: 35px; }
+      margin-left: 35px;
+      font-family: sans-serif; }
     #content .nor-tit .icon-iconfont-jishu {
       font-size: 18px;
       line-height: 18px; }
@@ -140,20 +153,85 @@ body {
         #content .list li .progress .travel {
           width: 60%; }
   #content #experience {
-    height: 1000px;
     margin-left: 240px;
     background: #fff;
     padding: 30px 40px; }
-    #content #experience .work-info .info1 {
-      color: #527460;
-      font-size: 14px;
-      font-weight: bold; }
-      #content #experience .work-info .info1 span .date {
-        padding-right: 30px; }
-      #content #experience .work-info .info1 b {
-        font-weight: bold; }
-      #content #experience .work-info .info1 em {
-        float: right;
-        font-style: normal; }
+    #content #experience .work-info {
+      font-size: 15px;
+      margin-bottom: 40px; }
+      #content #experience .work-info .info1 {
+        color: #527460;
+        font-weight: bold;
+        font-family: sans-serif;
+        margin-bottom: 5px;
+        padding-right: 5px;
+        font-size: 15px; }
+        #content #experience .work-info .info1 span .date {
+          padding-right: 70px; }
+        #content #experience .work-info .info1 b {
+          font-weight: bold; }
+        #content #experience .work-info .info1 em {
+          float: right;
+          font-style: normal; }
+      #content #experience .work-info dl dt {
+        margin-left: 20px;
+        line-height: 40px;
+        position: relative; }
+        #content #experience .work-info dl dt:before {
+          display: block;
+          content: "";
+          width: 10px;
+          height: 10px;
+          background: #000;
+          position: absolute;
+          left: -20px;
+          top: 15px; }
+      #content #experience .work-info dl dd {
+        padding-left: 22px;
+        text-indent: -22px;
+        margin-bottom: 10px; }
+      #content #experience .work-info:first-child .info1 span .date {
+        padding-right: 99px; }
+    #content #experience .project .item {
+      margin-bottom: 15px;
+      font-size: 15px; }
+      #content #experience .project .item h4 {
+        font-weight: normal;
+        line-height: 35px;
+        border-bottom: 1px solid #527460; }
+        #content #experience .project .item h4 span {
+          color: #527460;
+          float: right;
+          position: relative; }
+          #content #experience .project .item h4 span i {
+            position: absolute;
+            left: -26px;
+            font-size: 26px; }
+      #content #experience .project .item .language {
+        color: #4f6d5c;
+        line-height: 35px; }
+        #content #experience .project .item .language i {
+          font-size: 18px; }
+      #content #experience .project .item .link {
+        line-height: 30px; }
+        #content #experience .project .item .link a {
+          color: #527460;
+          text-decoration: none;
+          padding-right: 10px; }
+          #content #experience .project .item .link a:hover {
+            color: #4f6d5c; }
+      #content #experience .project .item .describe {
+        color: #666; }
+    #content #experience .education {
+      margin-bottom: 40px; }
+      #content #experience .education p {
+        font-size: 15px;
+        padding-right: 5px;
+        margin-bottom: 10px; }
+        #content #experience .education p .date {
+          padding-right: 70px; }
+        #content #experience .education p em {
+          font-style: normal;
+          float: right; }
 
 /*# sourceMappingURL=resume.css.map */
