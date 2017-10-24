@@ -5,7 +5,7 @@ body {
   width: 500px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
   background: #fff;
-  margin: 10px auto;
+  margin: 70px auto 0;
   border-radius: 5px;
   overflow: hidden; }
   .wrap > .e-img {
@@ -52,12 +52,12 @@ body {
         color: #B4B4B4; }
         .wrap .e-date .e-table td.cur-month {
           color: #333; }
-        .wrap .e-date .e-table td .current {
+        .wrap .e-date .e-table td.current {
           display: block;
           width: 36px;
           height: 36px;
           line-height: 36px;
-          margin: 0 auto;
+          margin: 7px auto 0;
           color: #fff;
           background: #31C1FD;
           border-radius: 50%; }

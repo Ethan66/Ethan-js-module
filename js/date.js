@@ -1,23 +1,41 @@
 var DatePicker=(function(){
-    var Date1=function($ct){
-        this.init($ct);
+    var Date1=function($ct,$ctPrev){
+        this.init($ct,$ctPrev);
         this.bind();
     }
-    Date1.prototype.init=function($ct){
+    Date1.prototype.init=function($ct,$ctPrev){
         this.$ct=$ct;
+        this.$ctPrev=$ctPrev;
         this.current=new Date();
         this.watchDate=new Date();
         this.dateArr=[];
-        this.firstDate=this.getMonthFirstDate(this.watchDate);
-        this.lastDate=this.getMonthLastDate(this.watchDate);
-        this.preMonthDate=this.getPreMonth(this.watchDate);
-        this.nextMonthDate=this.getNextMonth(this.watchDate);
+        this.setRelativeDate(this.watchDate);
         this.setData();
-        this.render();
+        this.renderShow(this.$ctPrev);
+        this.renderDate(this.$ct);
+    }
+    Date1.prototype.setRelativeDate=function(watchDate){
+        this.firstDate=this.getMonthFirstDate(watchDate);
+        this.lastDate=this.getMonthLastDate(watchDate);
+        this.preMonthDate=this.getPreMonth(watchDate);
+        this.nextMonthDate=this.getNextMonth(watchDate);
     }
     Date1.prototype.bind=function(){
-
-
+        var self=this;
+        self.$ctPrev.on("click",".e-left",function(){
+            self.watchDate=self.preMonthDate;
+            self.setRelativeDate(self.watchDate);
+            self.setData();
+            self.renderShow(self.$ctPrev);
+            self.renderDate(self.$ct);
+        });
+        self.$ctPrev.on("click",".e-right",function(){
+            self.watchDate=self.nextMonthDate;
+            self.setRelativeDate(self.watchDate);
+            self.setData();
+            self.renderShow(self.$ctPrev);
+            self.renderDate(self.$ct);
+        });
     }
 
     Date1.prototype.getMonthFirstDate=function(date){
@@ -50,6 +68,7 @@ var DatePicker=(function(){
         return new Date(year,month,1);
     }
     Date1.prototype.setData=function(){
+        this.dateArr=[];
         var day=this.firstDate.getDay();
         var lastDate=this.lastDate.getDate();
         var lastDay=this.lastDate.getDay();
@@ -60,6 +79,11 @@ var DatePicker=(function(){
         var nextMonthYear=this.nextMonthDate.getFullYear();
         var nextMonth=this.nextMonthDate.getMonth();
 
+        if(this.current.getFullYear()===year && this.current.getMonth()===month){
+            var nowMonth=true;
+            var nowDate=this.current.getDate();
+        }
+
         var preLastDay=this.getMonthLastDate(this.preMonthDate).getDate();
         for(var i=0;i<day;i++){
             var p=preLastDay-day+i+1;
@@ -67,6 +91,11 @@ var DatePicker=(function(){
         }
         for(var i=0;i<lastDate;i++){
             this.dateArr.push({type:"cur-month",date:i+1,fullDate:this.getYYMMDD(year,month,i+1)});
+            if(nowMonth){
+                if(i+1===nowDate){
+                    this.dateArr[i]["type"]+=" current";
+                }
+            }
         }
         for(var i=lastDay,j=1; i<6;i++,j++){
             this.dateArr.push({type:"",date:j,fullDate:this.getYYMMDD(nextMonthYear,nextMonth,j)});
@@ -77,7 +106,14 @@ var DatePicker=(function(){
         month++;
         return year+"/"+month+"/"+date;
     }
-    Date1.prototype.render=function(){
+    Date1.prototype.renderShow=function($ctPre){
+        var year=this.watchDate.getFullYear();
+        var month=this.watchDate.getMonth()+1;
+        var html="<p class='e-showDate'><i class='e-arrow e-left'><</i><span class='e-show'>"+year+"-"+month+"</span><i class='e-arrow e-right'>></i></p>";
+        // console.log(html);
+        $ctPre.html(html);
+    }
+    Date1.prototype.renderDate=function($ct){
         var html="<table class='e-table'><tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>";
         for(var i=0;i<this.dateArr.length;i++){
             if(i==0){
@@ -85,19 +121,20 @@ var DatePicker=(function(){
             }
             else{
                 html+="<td class='"+this.dateArr[i].type+"'>"+this.dateArr[i].date+"</td>";
-                if(i%6==0){
+                if(i%7==6){
                     html+="</tr><tr>";
                 }
             }
         }
         html+='</tr>';
-         //console.log(html);
-        this.$ct.append(html);
+        html=html.slice(0,-9);
+        // console.log(html);
+        $ct.html(html);
     }
     return {
         init: function($ct){
             $ct.each(function(index,value){
-                new Date1($(this));
+                new Date1($(this),$(this).prev());
             })
         }
     }
