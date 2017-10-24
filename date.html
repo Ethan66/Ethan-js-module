@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/date.css" />
+    <title>日期</title>
+</head>
+<body>
+  <div class="wrap">
+      <div class="e-img">
+          <p class="e-showDate">
+              <i class="e-arrow e-left"><</i>
+              <span class='e-show'>2017-08</span>
+              <i class="e-arrow e-right">></i>
+          </p>
+      </div>
+      <div class="e-date">
+          <!--<table class="e-table">-->
+              <!--<tr>-->
+                  <!--<th>日</th>-->
+                  <!--<th>一</th>-->
+                  <!--<th>二</th>-->
+                  <!--<th>三</th>-->
+                  <!--<th>四</th>-->
+                  <!--<th>五</th>-->
+                  <!--<th>六</th>-->
+              <!--</tr>-->
+              <!--<tr>-->
+                  <!--<td data-date="31"><span>31</span></td>-->
+                  <!--<td class="cur-month" data-date="1"><span>1</span></td>-->
+                  <!--<td class="cur-month current" data-date="1"><span>2</span></td>-->
+                  <!--<td class="cur-month" data-date="2"><span>3</span></td>-->
+                  <!--<td class="cur-month" data-date="3"><span>4</span></td>-->
+                  <!--<td class="cur-month" data-date="4"><span>5</span></td>-->
+                  <!--<td class="cur-month" data-date="5"><span>6</span></td>-->
+              <!--</tr>-->
+              <!--<tr>-->
+                  <!--<td class="cur-month" data-date="7"><span>7</span></td>-->
+                  <!--<td class="cur-month" data-date="8"><span>8</span></td>-->
+                  <!--<td class="cur-month" data-date="9"><span>9</span></td>-->
+                  <!--<td class="cur-month" data-date="10"><span>10</span></td>-->
+                  <!--<td class="cur-month" data-date="11"><span>11</span></td>-->
+                  <!--<td class="cur-month" data-date="12"><span>12</span></td>-->
+                  <!--<td class="cur-month" data-date="13"><span>13</span></td>-->
+              <!--</tr>-->
+              <!--<tr>-->
+                  <!--<td class="cur-month" data-date="31"><span>31</span></td>-->
+                  <!--<td class="cur-month" data-date="1"><span>1</span></td>-->
+                  <!--<td class="cur-month"><span class="current">2</span></td>-->
+                  <!--<td class="cur-month" data-date="2"><span>3</span></td>-->
+                  <!--<td class="cur-month" data-date="3"><span>4</span></td>-->
+                  <!--<td class="cur-month" data-date="4"><span>5</span></td>-->
+                  <!--<td class="cur-month" data-date="5"><span>6</span></td>-->
+              <!--</tr>-->
+              <!--<tr>-->
+                  <!--<td class="cur-month" data-date="7"><span>7</span></td>-->
+                  <!--<td class="cur-month" data-date="8"><span>8</span></td>-->
+                  <!--<td class="cur-month" data-date="9"><span>9</span></td>-->
+                  <!--<td class="cur-month" data-date="10"><span>10</span></td>-->
+                  <!--<td class="cur-month" data-date="11"><span>11</span></td>-->
+                  <!--<td class="cur-month" data-date="12"><span>12</span></td>-->
+                  <!--<td class="cur-month" data-date="13"><span>13</span></td>-->
+              <!--</tr>-->
+          <!--</table>-->
+      </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="js/date.js"></script>
+  <script>
+      DatePicker.init($(".e-date"));
+  </script>
+</body>
+</html>

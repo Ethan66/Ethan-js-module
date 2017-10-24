@@ -1,0 +1,65 @@
+body {
+  background: #f5f5f5; }
+
+.wrap {
+  width: 500px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  background: #fff;
+  margin: 10px auto;
+  border-radius: 5px;
+  overflow: hidden; }
+  .wrap > .e-img {
+    padding: 100px 0;
+    background: url(../images/mountain.jpg) no-repeat;
+    background-size: cover; }
+  .wrap .e-showDate {
+    text-align: center;
+    color: #fff;
+    font-size: 23px;
+    position: relative; }
+    .wrap .e-showDate .e-arrow {
+      display: block;
+      width: 26px;
+      height: 26px;
+      line-height: 24px;
+      border-radius: 50%;
+      font-size: 18px;
+      background: rgba(0, 0, 0, 0.2);
+      color: #fff;
+      position: absolute;
+      top: 2px;
+      left: 100px;
+      cursor: pointer;
+      transition: all .4s; }
+      .wrap .e-showDate .e-arrow:hover {
+        background: rgba(0, 0, 0, 0.4); }
+      .wrap .e-showDate .e-arrow.e-right {
+        left: auto;
+        right: 100px; }
+  .wrap .e-date {
+    padding: 20px; }
+    .wrap .e-date .e-table {
+      width: 100%; }
+      .wrap .e-date .e-table th {
+        color: #B4B4B4;
+        width: 14.2857142857%;
+        line-height: 50px;
+        font-weight: normal; }
+      .wrap .e-date .e-table td {
+        text-align: center;
+        line-height: 50px;
+        font-size: 18px;
+        color: #B4B4B4; }
+        .wrap .e-date .e-table td.cur-month {
+          color: #333; }
+        .wrap .e-date .e-table td .current {
+          display: block;
+          width: 36px;
+          height: 36px;
+          line-height: 36px;
+          margin: 0 auto;
+          color: #fff;
+          background: #31C1FD;
+          border-radius: 50%; }
+
+/*# sourceMappingURL=date.css.map */
