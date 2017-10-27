@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="css/searchImg.css" />
+    <title>图片搜索</title>
+</head>
+<body>
+  <header>
+      <div class="left">
+          <div class="logo"></div>
+          <form class="search">
+              <div class="tag">
+                  <span>所有图像</span>
+              </div>
+              <div class="input">
+                  <input type="text" placeholder="搜索图片" /><button>搜索</button>
+              </div>
+          </form>
+      </div>
+      <div class="right">
+          <ul>
+              <li>
+                  <a href="#">注册</a>
+              </li>
+              <li>
+                  <a href="#">登录</a>
+              </li>
+              <li>
+                  <a href="#">...</a>
+              </li>
+          </ul>
+      </div>
+  </header>
+  <main>
+      <div class="classify">
+          <ul>
+              <li class="active">
+                  <a href="#">照片</a>
+              </li>
+              <li>
+                  <a href="#">插图</a>
+              </li>
+              <li>
+                  <a href="#">矢量图</a>
+              </li>
+          </ul>
+      </div>
+      <div class="imgResult">
+
+      </div>
+  </main>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="js/searchImg.js"></script>
+  <script>
+      Bucket.init($(".imgResult"),260);
+  </script>
+</body>
+</html>
