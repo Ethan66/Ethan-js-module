@@ -1,5 +1,9 @@
 var Pager=(function(){
     var Pager1=function($ct,firNum,now,num,total){
+        //firNum表示当前所展示页数的第一页
+        //now表示当前所在第几页
+        //num表示当前要展示多少页数
+        //total表示一共有多少页
         this.init($ct,total,num,firNum,now);
         this.bind();
     }
