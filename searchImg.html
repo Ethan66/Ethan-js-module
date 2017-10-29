@@ -53,11 +53,19 @@
       <div class="imgResult">
 
       </div>
+      <div class="pager">
+          <div class="e-pager">
+
+          </div>
+      </div>
   </main>
+  <!--<script src="js/jquery-1.11.3.js"></script>-->
   <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/searchImg.js"></script>
+  <script src="js/pager.js"></script>
   <script>
-      Bucket.init($(".imgResult"),260);
+      Bucket.init($(".imgResult"),250,10);
+      Pager.init($(".e-pager"),1,3,10,99);
   </script>
 </body>
 </html>
