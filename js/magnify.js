@@ -32,6 +32,11 @@ var Magnify=(function(){
             that.$magnifyScope.addClass('none');
             that.$scope.addClass("none");
         })
+        $(window).resize(function(){
+            that.ctLeft=that.$ct.offset().left;
+            that.ctTop=that.$ct.offset().top;
+            that.setLargeScope(that.ctLeft,that.ctTop,that.imgUrl);    //生成大图片的html并设置初步位置
+        })
     }
     Magnify1.prototype.setLargeScope=function(x,y,imgUrl){
         var html='<div class="e-largeImg none">\
