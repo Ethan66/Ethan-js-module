@@ -1,0 +1,90 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0; }
+  header .headerMin {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto; }
+    header .headerMin a {
+      text-decoration: none;
+      color: #fff; }
+      header .headerMin a:hover {
+        text-decoration: none; }
+    header .headerMin > .left {
+      display: flex; }
+      header .headerMin > .left h1 {
+        padding: 10px;
+        font-size: 18px;
+        color: #fff; }
+      header .headerMin > .left .nav {
+        display: flex;
+        align-items: center; }
+        header .headerMin > .left .nav li {
+          margin: 0 10px;
+          position: relative; }
+          header .headerMin > .left .nav li a {
+            padding: 6px 0; }
+            header .headerMin > .left .nav li a:hover {
+              border-bottom: 1px solid #fff; }
+          header .headerMin > .left .nav li:last-child a {
+            font-size: 34px;
+            position: absolute;
+            top: -38px; }
+            header .headerMin > .left .nav li:last-child a:hover {
+              border-bottom-color: transparent; }
+
+#banner {
+  height: 600px;
+  background: black; }
+
+#main {
+  background: url(../images/bk.jpg);
+  min-height: 100vh;
+  border-top: 1px solid transparent; }
+  #main .imgWrap {
+    width: 1200px;
+    margin: 10px auto 0;
+    position: relative; }
+    #main .imgWrap li {
+      padding: 10px;
+      border: 1px solid #ddd;
+      width: 292.5px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      background: #fff;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+      position: absolute;
+      /*&:nth-child(1){
+        top: 0; left: 0;
+      }
+      &:nth-child(2){
+        top: 0; left: 242px;
+      }
+      &:nth-child(3){
+        top: 0; left: 484px;
+      }
+      &:nth-child(4){
+        top: 0; left: 726px;
+      }
+      &:nth-child(5){
+        top: 0; left: 968px;
+      }*/ }
+      #main .imgWrap li .img {
+        background: #000;
+        width: 100%; }
+        #main .imgWrap li .img img {
+          width: 100%; }
+      #main .imgWrap li .text {
+        font-size: 14px; }
+        #main .imgWrap li .text h4 {
+          font-weight: normal;
+          font-size: 14px;
+          padding: 5px 0; }
+  #main .hidden {
+    height: 20px;
+    opacity: 0; }
+
+/*# sourceMappingURL=waterfall.css.map */
