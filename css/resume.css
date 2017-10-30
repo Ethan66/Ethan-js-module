@@ -1,4 +1,5 @@
 body {
+  background: #f2f2f2;
   font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
   font-family: sans-serif;
   font-size: 14px; }
@@ -71,6 +72,8 @@ body {
       line-height: 25px;
       margin: 0 16px 10px -5px;
       color: #4f6d5c; }
+  #content .project > .nor-tit {
+    border-bottom-color: transparent; }
   #content .nor-tit {
     color: #527460;
     padding: 10px 0;
