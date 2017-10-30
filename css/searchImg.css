@@ -149,7 +149,9 @@ main {
         text-align: center;
         margin: .2em;
         border: 1px solid #e1e2e3;
-        cursor: pointer; }
+        cursor: pointer;
+        color: #008ddf;
+        transition: all 0.4s; }
       main .e-pager > nav > button {
         background: #fff; }
         main .e-pager > nav > button:hover {
