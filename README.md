@@ -6,7 +6,7 @@
 ### 2、Login
 [链接地址](https://ethan66.github.io/Ethan-js-module/login.html)
 
-### 3、Login
+### 3、放大器
 [链接地址](https://ethan66.github.io/Ethan-js-module/magnify.html)
 
 ### 4、pager
