@@ -92,7 +92,7 @@ var DatePicker=(function(){
         for(var i=0;i<lastDate;i++){
             this.dateArr.push({type:"cur-month",date:i+1,fullDate:this.getYYMMDD(year,month,i+1)});
             if(nowMonth){
-                if(i+1===nowDate){
+                if(i+1-day===nowDate){
                     this.dateArr[i]["type"]+=" current";
                 }
             }
